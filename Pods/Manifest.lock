@@ -1,0 +1,12 @@
+PODS:
+  - ConfettiView (0.1.7)
+
+DEPENDENCIES:
+  - ConfettiView
+
+SPEC CHECKSUMS:
+  ConfettiView: e70aa9be11d778d2c2778429aad92fa6f5d9c6e7
+
+PODFILE CHECKSUM: 49a91f49d11de0431e18e17d897c98a9d65c9434
+
+COCOAPODS: 1.3.1
