@@ -17,8 +17,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let imagePicker = UIImagePickerController()
     
+    @IBOutlet weak var meloIt: UIButton!
+    @IBOutlet weak var pressBtn: UILabel!
+    @IBOutlet weak var avatarView: UIImageView!
+    @IBOutlet weak var pressBtnText: UILabel!
+    @IBOutlet weak var meloLogoSmall: UILabel!
+    @IBOutlet weak var addFriendsBtn: UIImageView!
+    @IBOutlet weak var resetbtn: UIImageView!
     
     
+    @IBOutlet weak var meloItBorder: UIImageView!
     var diceArray: [UIImage] = []
     
     let funArray = ["Take a shot.", "Pick someone to take a shot.", "Finish your drink!", "Dance around the room singing a song.", "Take a shot.", "Do your best Batman impression.", "Take a shot.", "Act like a monkey.", "MELO waterfall", "Person next to you has to drink", "make a crazy drink mixture and chug it", "MELO TIME: Everyone has to drink.", "Refill everyones drinks", "Drink n repeat", "Propose to the whisky bottle", "Stand on one leg for 3 mins", "Stand in the corner and be quiet for 3 mins", "Take a shot.", "Pick someone to take a shot.", "Finish your drink!", "Take a shot.", "Take a shot.", "Act like a monkey.", "Text someone using only your nose.", "Let someone tickle you for 20 seconds.", "Talk and act like a robot.", "Go outside and howl at the moon.", "Come up with famous people each person in your group looks like.", "Wear your t-shirt inside out.", "Try to make the person next to you laugh. You’ve got 60 seconds.", "Talk to a pillow like it’s your crush.", "Give yourself a new name.", "Just drink!", "Call a 7-Eleven and ask if they’re open.", "Get into a debate with a wall.", "Hold hands with the person next to you.", "Do 10 pushups.", "Do a handstand.", "Take 3 shots.", "Tell a joke.", "Take someone’s drink and drink out of it.", "Eat grass.", "MELO TIME: Everyone has to drink.", "Take off a piece of clothing", "Tripple Shot", "MELO TIME: Everyone has to drink.", "Let the group give you a new hairstyle.", "Talk in an accent for the next 3 rounds.", "Attempt to do a magic trick.", "Be someone’s pet for the next 5 minutes.", "Put 4 ice cubes down your pants.", "Just drink!"]
@@ -79,9 +87,62 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         resetFriends.addGestureRecognizer(tapGesture2)
         resetFriends.isUserInteractionEnabled = true
                 imagePicker.delegate = self
+        
+        meloIt.frame = CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 250, height: 80)
+        let centerOfScreenX5 = (self.view.frame.size.width * 0.5) - (meloIt.frame.width / 2)
+        let centerOfScreenY5 = (self.view.frame.size.height * 0.85) - (meloIt.frame.height / 2)
+        meloIt.frame = CGRect(x: centerOfScreenX5, y: centerOfScreenY5, width: 250, height: 80)
+        
+        meloItBorder.frame = CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 270, height: 80)
+        let centerOfScreenX6 = (self.view.frame.size.width * 0.5) - (meloItBorder.frame.width / 2)
+        let centerOfScreenY6 = (self.view.frame.size.height * 0.85) - (meloItBorder.frame.height / 2)
+        meloItBorder.frame = CGRect(x: centerOfScreenX6, y: centerOfScreenY6, width: 270, height: 80)
+        
+        
+        pressBtn.frame = CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 270, height: 80)
+        let centerOfScreenX7 = (self.view.frame.size.width * 0.5) - (pressBtn.frame.width / 2)
+        let centerOfScreenY7 = (self.view.frame.size.height * 0.93) - (pressBtn.frame.height / 2)
+        pressBtn.frame = CGRect(x: centerOfScreenX7, y: centerOfScreenY7, width: 270, height: 80)
+        
+        
+        avatarView.frame = CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 220, height: 220)
+        let centerOfScreenX8 = (self.view.frame.size.width * 0.5) - (avatarView.frame.width / 2)
+        let centerOfScreenY8 = (self.view.frame.size.height * 0.33) - (avatarView.frame.height / 2)
+        avatarView.frame = CGRect(x: centerOfScreenX8, y: centerOfScreenY8, width: 220, height: 220)
+        
+        
+        pressBtnText.frame = CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 196, height: 72)
+        let centerOfScreenX9 = (self.view.frame.size.width * 0.5) - (pressBtnText.frame.width / 2)
+        let centerOfScreenY9 = (self.view.frame.size.height * 0.62) - (pressBtnText.frame.height / 2)
+        pressBtnText.frame = CGRect(x: centerOfScreenX9, y: centerOfScreenY9, width: 196, height: 72)
+        
+        
+        meloLogoSmall.frame = CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 181, height: 52)
+        let centerOfScreenX10 = (self.view.frame.size.width * 0.5) - (meloLogoSmall.frame.width / 2)
+        let centerOfScreenY10 = (self.view.frame.size.height * 0.09) - (meloLogoSmall.frame.height / 2)
+        meloLogoSmall.frame = CGRect(x: centerOfScreenX10, y: centerOfScreenY10, width: 181, height: 52)
+    
+        
+        
+        addFriendsBtn.frame = CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 181, height: 52)
+        let centerOfScreenX11 = (self.view.frame.size.width * 0.8) - (addFriendsBtn.frame.width / 2)
+        let centerOfScreenY11 = (self.view.frame.size.height * 0.09) - (addFriendsBtn.frame.height / 2)
+        addFriendsBtn.frame = CGRect(x: centerOfScreenX11, y: centerOfScreenY11, width: 181, height: 52)
+        
+        resetbtn.frame = CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 181, height: 52)
+        let centerOfScreenX12 = (self.view.frame.size.width * 0.2) - (resetbtn.frame.width / 2)
+        let centerOfScreenY12 = (self.view.frame.size.height * 0.09) - (resetbtn.frame.height / 2)
+        resetbtn.frame = CGRect(x: centerOfScreenX12, y: centerOfScreenY12, width: 181, height: 52)
+        
+        
+        
         }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+
+    }
         func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
